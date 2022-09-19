@@ -1,0 +1,486 @@
+/*======================
+Template Name:Practice class 7
+Author:Tonmoy
+Des:Practice portfolio
+=======================/*
+
+/* Global style */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1.6rem;
+    line-height: 1.3;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+    font-weight:600;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content:'';
+    display: table;
+    clear:both;
+}
+
+img{
+    width: 100%;
+}
+
+
+/* Reusable Components */
+
+
+
+.btn{
+    width: 20rem;
+    padding: 1.5rem 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .3s;
+    border:.2rem, solid #222;
+}
+
+.btn-full{
+    background: #ff2b4a;
+    border-color: #ff2b4a;
+}
+
+.btn-full:hover {
+    background: transparent;
+    color:#ff2b4a;
+}
+
+
+section{
+    padding: 12rem 0;
+}
+
+.container{
+    max-width: 117rem;
+    margin:auto;
+}
+
+/* HERO */
+#hero{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)), url('../img/hero.jpg') no-repeat center top / cover;
+    position: relative;
+}
+
+#hero h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+    color: #fff;
+}
+
+.hero-content{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+#hero h1::before{
+    content:'';
+    width: 100%;
+    height:.2rem;
+    background: #fff;
+    display: block;
+}
+
+#hero h1::after{
+    content:'';
+    width: 100%;
+    height:.2rem;
+    background: #fff;
+    display: block;
+}
+
+.hero-content span{
+    font-size:2rem;
+}
+
+.next-section a ion-icon{
+    color:#fff;
+    font-size: 4.5rem;
+    position: absolute;
+
+    /*MY STUFF*/
+    left: 50%;
+    bottom: 4.5rem;
+    /*MY STUFF*/
+}
+
+.section-title{
+    margin-bottom:4.5rem;
+    text-align: center;
+}
+
+.section-title h2{
+    font-size:4rem;
+
+}
+
+.section-title p{
+    margin:1.5rem 0;
+}
+
+/*Hamburger Menu */
+.menu-container {
+    width: 0%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.842);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.close-btn a ion-icon{
+    color: #fff;
+    font-size: 4.5rem;
+    position: absolute;
+    top: 4.5rem;
+    right: 4.5rem;
+}
+.menu-item{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-item li a{
+    color: #fff;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: .5rem 0;
+    display: inline-block;
+
+}
+
+/* About */
+.about-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap:4.5rem;
+}
+
+.about-grid-item h4{
+    font-size:1.8rem;
+}
+
+.about-grid-item p{
+    margin: 4.5rem 0;
+    
+}
+
+.about-grid-item img{
+    width: 28rem;
+}
+
+
+
+/*Process*/
+#process{
+    background: #f6f6f6;
+}
+
+.process-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:1rem;
+}
+
+.process-grid-item{
+    background: #000;
+    color: #fff;
+    padding:8rem 0;
+    text-align: center;
+}
+
+.process-grid-item:nth-child(1) {
+    background-color: #10c6fc;
+}
+
+.process-grid-item:nth-child(2) {
+    background-color: #835aeb;
+}
+
+.process-grid-item:nth-child(3) {
+    background-color: #002453ce;
+}
+
+.process-grid-item:nth-child(4) {
+    background-color: #ff2b4a;
+}
+.process-grid-item img{
+    width: 3.6rem ;
+    
+}
+
+.process-grid-item ion-icon{
+    font-size: 3.5rem;
+}
+
+.process-grid-item h4{
+    margin-top: 4rem;
+    text-transform: uppercase;
+    color: #000;
+}
+
+/*Experience*/
+
+#exp{
+    background: #f6f6f6 url('../img/experience.jpg') no-repeat center /cover fixed;
+}
+
+.exp-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+
+}
+
+.exp-grid-item{
+    background: rgba(0,0,0,0.85);
+    color: #f6f6f6;
+    padding: 4.5rem 3rem;
+}
+
+.exp-grid-item h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #f6f6f6;
+}
+
+.exp-grid-item h4{
+    color: #f6f6f6;
+    font-size:2rem;
+}
+
+.exp-grid-item span{
+    margin: 1.5rem 0;
+    display: inline-block;
+}
+
+hr {
+    border: 0;
+    border-bottom:.1rem solid #fff;
+    margin: 3.5rem 0;
+}
+
+/*Work Photos */
+
+.work-filter {
+    margin-bottom: 4.5rem;
+    text-align: center;
+}
+
+.work-filter button {
+    background: #000;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-transform: capitalize;
+    border: 0;
+    cursor: pointer;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.work-grid-item {
+    height: 27.5rem;
+}
+
+.work-grid-item img {
+    height: 100%;
+}
+
+.work-grid-item:nth-child(5) {
+    grid-column: 1/3;
+}
+
+button.mixitup-control-active {
+    background-color: #ff2b4a;
+}
+
+.uk-lightbox {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+/* Testimonial */
+
+#tm {
+    background: url(../img/testimonial.jpg) no-repeat center top / cover;
+}
+
+.tm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.quote{
+    width: 2.5rem;
+}
+
+.signature{
+    width: 17rem;
+}
+
+.tm-grid-item p{
+    margin: 4.5rem 0;
+}
+
+
+/* Contact */
+#contact{
+    background: url(../img/contact.jpg) no-repeat center  /cover fixed;
+}
+
+.ct-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.ct-grid-item:nth-child(1),
+.nested-ct-grid-item {
+    background: rgba(0 ,0 ,0 ,0.80);
+    padding: 1rem 2rem;
+}
+
+.ct-grid-item h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+form input[type="text"],
+form input[type="email"],
+textarea{
+width: 100%;
+box-sizing: border-box;
+border: .1rem solid #fff;
+background: transparent;
+font-size: 1.6rem;
+margin: 1rem 0;
+padding: .5rem 1rem;
+}
+
+::-webkit-input-placeholder{
+  color: #fff;  
+}
+
+::-moz-placeholder{
+  color: #fff;  
+}
+
+:-ms-input-placeholder{
+  color: #fff;  
+}
+
+::-ms-input-placeholder{
+  color: #fff;  
+}
+
+::placeholder{
+  color: #fff;  
+}
+
+textarea{
+    min-height: 16rem;
+}
+
+.sub-btn{
+    text-align: right;
+    margin-top: 3rem;
+}
+
+.nested-ct-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    color: #fff;
+}
+
+
+/* Footer */
+#footer{
+    background: #222222;
+    padding: 1.5rem 0;
+    color: #fff;
+    text-align: center;
+}
+
+.social-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-list li{
+    display: inline-block;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/*Other*/
+.logo{
+    float: left;
+    margin-top: 4.5rem;
+}
+
+.menu{
+    float: right;
+    margin-top: 4.5rem;
+}
+
+.menu a ion-icon{
+    color: #fff;
+    font-size: 4.5rem;
+}
+
+
